@@ -1,0 +1,216 @@
+:root{
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "DM Sans";
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--cream);
+    font-size: 18px;
+
+    
+}
+
+main{
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    background-color: var(--soft-red);
+    width: 530px;
+    color: var(--cream);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .left h2{
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.header .left span{
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.header .right{
+    display: flex;
+    align-items: center;
+}
+
+.main{
+    background-color: var(--very-pale-orange);
+    width: 530px;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.main .spending{
+    color: var(--dark-brown);
+    font-size: 25px;
+    margin-bottom: 70px;
+}
+
+.main .graphique{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.main .graphique div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.main .graphique div .montant{
+    background-color: var(--dark-brown);
+    color: var(--cream);
+    padding: 8px;
+    border-radius: 7px;
+
+    position: absolute;
+    top: -50px;
+}
+
+.main .graphique div .bar {
+    height: 60px;
+    width: 42px;
+    border-radius: 5px;
+    background-color: var(--soft-red);
+}
+
+.main .graphique .monday .bar{
+    height: 50px;
+}
+
+.main .graphique .tuesday .bar{
+    height: 90px;
+}
+
+.main .graphique .wednesday .bar{
+    height: 140px;
+    background-color: var(--cyan);
+}
+
+.main .graphique .thursday .bar{
+    height: 80px;
+}
+
+.main .graphique .friday .bar{
+    height: 60px;
+}
+
+.main .graphique .saturday .bar{
+    height: 110px;
+}
+
+.main .graphique .sunday .bar{
+    height: 70px;
+}
+
+.main .graphique div span{
+    font-size: 14px;
+    color: var(--medium-brown);
+    margin-top: 5px;
+}
+
+.main hr{
+    margin: 30px 5px;
+    height: 4px;
+    opacity: 0.2;
+}
+
+
+.main .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .total .left h2{
+    font-size: 16px;
+    color: var(--medium-brown);
+}
+
+.main .total .left span{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--dark-brown);
+}
+
+.main .total .right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.main .total .right span:first-child{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark-brown);
+}
+
+.main .total .right .from{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--medium-brown);
+    text-align: right;
+}
+
+footer{
+    height: 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active{
+    display: none !important;
+}
+
+@media screen and (max-width : 600px) {
+    .header,
+    .main{
+        width: calc(100% - 20px);
+    }
+
+
+}
+
+@media screen and (max-width : 400px) {
+    .main .graphique div .bar {
+        width: 22px;
+    }
+
+    .main .total .left span{
+        font-size: 20px;
+    }
+}
